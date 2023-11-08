@@ -1,0 +1,13 @@
+name = "EconomicChoice"
+uuid = "e099170f-a360-4fe2-bd64-5964765c7abe"
+authors = ["Tim Holy <tim.holy@gmail.com> and contributors"]
+version = "1.0.0-DEV"
+
+[compat]
+julia = "1"
+
+[extras]
+Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
+
+[targets]
+test = ["Test"]
