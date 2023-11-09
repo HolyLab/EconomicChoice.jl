@@ -50,12 +50,12 @@ using Test
         trials = buildtrials(offers, 0, 2, 0);
 
         rr = regress_variable(offer_valueA, trials, 2.5 * offer_valueA.(trials))
-        @test only(coef(rr)) ≈ 2.5
+        @test last(coef(rr)) ≈ 2.5
         rr = regress_variable(offer_valueB, trials, 1.5 * offer_valueB.(trials))
-        @test only(coef(rr)) ≈ 1.5
+        @test last(coef(rr)) ≈ 1.5
         rr = regress_variable(chosen_value, trials, 1.2 * chosen_value.(trials))
-        @test only(coef(rr)) ≈ 1.2
+        @test last(coef(rr)) ≈ 1.2
         rr = regress_variable(isAright, trials, 0.8 * isAright.(trials))
-        @test only(coef(rr)) ≈ 0.8
+        @test last(coef(rr)) ≈ 0.8
     end
 end

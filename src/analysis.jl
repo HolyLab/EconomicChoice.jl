@@ -7,7 +7,7 @@ from the trials. `trials` is a vector of `TwoJuiceTrial` objects.
 function regress_variable(f, trials, responses)
     x = f.(trials)
     y = scalar_response.(responses)
-    lm(reshape(x, (eachindex(x), 1)), y)
+    lm([ones(eachindex(x)) x], y)
 end
 
 """
